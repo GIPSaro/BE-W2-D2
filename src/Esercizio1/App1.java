@@ -1,6 +1,7 @@
 package Esercizio1;
 
 import java.util.HashSet;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -23,8 +24,10 @@ public class App1 {
                     wordSet.add(myWord);
                 }
             }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
+        } catch (
+                InputMismatchException e) {
+            //InputMismatchException è un blocco che cattura l'eccezione nel momento in cui l'utente inserisce un double o una stringa
+            System.out.println("Errore: Inserisci un numero valido!");
         } finally {
             myScanner.close();
         }
